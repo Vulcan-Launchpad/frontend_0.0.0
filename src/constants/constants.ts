@@ -28,7 +28,6 @@ export const FACTORY_ADDRESSES: Record<string, string> = {
   [CHAIN_IDS.BASE]: "0x18e104Bfb108c65CCCDaf752825C90A05Cb1eD7e", //verified
   [CHAIN_IDS.BSC]: "0x18e104Bfb108c65CCCDaf752825C90A05Cb1eD7e", //verified
   [CHAIN_IDS.SEPOLIA]: "0x709Fc0DB7De3c354f7B165d9E8F5AAaB6Ffc1675", //verified
-  // [CHAIN_IDS.SEPOLIA]: "0x12C2b34c7D028AdfA8A077d547C6D2FDdEdFFF1B", //verified
 };
 export const DAI_ADDRESSES: Record<string, string> = {
   [CHAIN_IDS.ARBITRUM]: "0xda10009cbd5d07dd0cecc66161fc93d7c9000da1", //verified
@@ -46,20 +45,40 @@ export const cyptoSIDAO: Record<number, string> = {
 
 export const CHAIN_DATA: Record<string, CHAIN> = {
   [CHAIN_IDS.ARBITRUM]: {
-    chainId: 43114,
-    explorer: 'https://arbiscan.io'
+    name: "Arbitrum",
+    symbol: "ETH",
+    ticker: "ETH",
+    rpc: process.env.NEXT_PUBLIC_PRC_ARBITRUM!,
+    chainId: 42161,
+    explorer: 'https://arbiscan.io/',
+    logo: "/images/chains/arb.svg"
   },
   [CHAIN_IDS.SEPOLIA]: {
-    chainId: 1115511,
-    explorer: 'https://sepolia.etherscan.io'
+    name: "Sepolia Eth",
+    symbol: "ETH",
+    ticker: "ETH",
+    rpc: process.env.NEXT_PUBLIC_RPC_SEPOLIA!,
+    chainId: 11155111,
+    explorer: 'https://sepolia.etherscan.io/',
+    logo: "/images/chains/sepolia.svg"
   },
   [CHAIN_IDS.BSC]: {
+    name: "BSC Chain",
+    symbol: "BNB",
+    ticker: "BNB",
+    rpc: process.env.NEXT_PUBLIC_PRC_BSC!,
     chainId: 56,
-    explorer: 'https://bscscan.com'
+    explorer: 'https://bscscan.com/',
+    logo: "/images/chains/bsc.svg"
   },
   [CHAIN_IDS.BASE]: {
+    name: "Base Chain",
+    symbol: "ETH",
+    ticker: "ETH",
+    rpc: process.env.NEXT_PUBLIC_PRC_BASE!,
     chainId: 8453,
-    explorer: 'https://basescan.org'
+    explorer: 'https://snowtrace.io',
+    logo: "/images/chains/base.svg"
   }
 }
 

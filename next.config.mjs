@@ -14,8 +14,11 @@ const nextConfig = {
   },
   webpack: config => {
     config.externals.push('pino-pretty', 'lokijs', 'encoding');
-    config.resolve.fallback = { fs: false, net: false, tls: false };
-    config.watchOptions = { poll: 1000, aggregateTimeout: 500 };
+    config.resolve.fallback = {
+      fs: false,
+      net: false,
+      tls: false
+    };
     return config;
   },
   images: {
